@@ -74,8 +74,4 @@ public class LegacyInn {
 
 	} 
 	
-	public static void main(String[] args) {
-		 new LegacyInn().updateQuality();
-		 System.out.println(new LegacyInn().getItems().get(3).getQuality());
-	}
 }

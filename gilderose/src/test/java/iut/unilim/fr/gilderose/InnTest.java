@@ -18,10 +18,11 @@ public class InnTest {
 	public void start() {
 		inn = new Inn();
 		legacy = new LegacyInn();
-		inn.updateQuality();
-		legacy.updateQuality();
-
-	}
+		for (int i = 0; i < 1000; i++) {
+			inn.updateQuality();
+			legacy.updateQuality();
+		}
+	} 
 
 	@Test
 	public void nombreItemDansLaListe() {
