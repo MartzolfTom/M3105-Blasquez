@@ -1,6 +1,7 @@
 package iut.unilim.fr.firstdoublure;
 
 import static org.junit.Assert.assertEquals;
+
 import static org.mockito.Mockito.*;
 
 import org.junit.Test;
@@ -13,6 +14,8 @@ public class UserServiceImplTest {
     
     	HashProvider hashProvider = mock(HashProvider.class);
     	when(hashProvider.hash("secret")).thenReturn("hash");
+    	
+    	
        	UserService userService = new UserServiceImpl(hashProvider);
      	
     	User user = userService.createUser("Bob", "secret");
