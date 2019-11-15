@@ -1,4 +1,4 @@
-package fr.unilim.iut.gildedrose;
+package iut.unilim.fr.gilderose;
 
 import java.util.ArrayList;
 import java.util.List;

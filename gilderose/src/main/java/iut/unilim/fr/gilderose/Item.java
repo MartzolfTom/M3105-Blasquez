@@ -1,4 +1,4 @@
-package fr.unilim.iut.gildedrose;
+package iut.unilim.fr.gilderose;
 
 public class Item {
 	private String name;

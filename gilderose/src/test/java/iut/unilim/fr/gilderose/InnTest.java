@@ -1,4 +1,4 @@
-package fr.unilim.iut.gildedrose;
+package iut.unilim.fr.gilderose;
 
 import org.junit.Test;
 import static org.assertj.core.api.Assertions.assertThat;
