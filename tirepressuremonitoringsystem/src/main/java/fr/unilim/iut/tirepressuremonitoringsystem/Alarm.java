@@ -1,30 +1,32 @@
 package fr.unilim.iut.tirepressuremonitoringsystem;
 
 public class Alarm {
-	private final double LowPressureThreshold;
-	private final double HighPressureThreshold;
-
-	Sensor sensor = new Sensor();
-
+	private final double lowThreshold;
+	private final double highThreshold;
+	Sensor sensor;
 	boolean alarmOn;
 
 	public Alarm(Sensor sensor) {
 		this.sensor = sensor;
-		this.LowPressureThreshold  = 17;
-		this.HighPressureThreshold = 21;
+		this.lowThreshold  = 17;
+		this.highThreshold = 21;
 		this.alarmOn = false;
 	}
 
 	public void check() {
-		double psiPressureValue = sensor.popNextPressurePsiValue();
+		double psiValue = sensor.popNextPressurePsiValue();
 
-		if (validePressure(psiPressureValue)) {
-			alarmOn = true;
+		if (validePsi(psiValue)) {
+			activateAlarm();
 		}
 	}
 
-	private boolean validePressure(double psiPressureValue) {
-		return psiPressureValue < LowPressureThreshold || HighPressureThreshold < psiPressureValue;
+	private void activateAlarm() {
+		alarmOn = true;
+	}
+
+	private boolean validePsi(double psiValue) {
+		return psiValue < lowThreshold || highThreshold < psiValue;
 	}
 
 	public boolean isAlarmOn() {
