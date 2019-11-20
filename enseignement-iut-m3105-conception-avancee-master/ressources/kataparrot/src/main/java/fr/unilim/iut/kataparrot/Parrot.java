@@ -1,5 +1,7 @@
 package fr.unilim.iut.kataparrot;
 
+import javax.management.RuntimeErrorException;
+
 public class Parrot {
 
 	private ParrotTypeEnum type;
@@ -17,7 +19,7 @@ public class Parrot {
 	public double getSpeed() {
 		switch (type) {
 		case EUROPEAN:
-			return getBaseSpeed();
+			throw new RuntimeException("Should be unreachable");
 		case AFRICAN:
 			return Math.max(0, getBaseSpeed() - getLoadFactor() * numberOfCoconuts);
 		case NORWEGIAN_BLUE:
@@ -34,7 +36,7 @@ public class Parrot {
 		return 9.0;
 	}
 
-	private double getBaseSpeed() {
+	protected static double getBaseSpeed() {
 		return 12.0;
 	}
 
