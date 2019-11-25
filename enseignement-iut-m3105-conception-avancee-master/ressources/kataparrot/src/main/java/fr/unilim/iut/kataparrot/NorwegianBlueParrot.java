@@ -2,21 +2,24 @@ package fr.unilim.iut.kataparrot;
 
 public class NorwegianBlueParrot extends Parrot {
 
+	private static final double MAXIMUM_SPEED = 24.0;
 	protected double voltage;
 	protected boolean isNailed;
 
 	public NorwegianBlueParrot(double voltage, boolean isNailed) {
-		super(ParrotTypeEnum.NORWEGIAN_BLUE);
 		this.voltage=voltage;
 		this.isNailed=isNailed;
 	}
 
 	public double getSpeed() {
-		return (isNailed) ? 0 : getBaseSpeed(voltage);
+		if (isNailed)
+			return 0;
+		else
+			return getBaseSpeed(voltage);
 	}
 
 	protected double getBaseSpeed(double voltage) {
-		return Math.min(24.0, voltage * BASE_SPEED);
+		return Math.min(MAXIMUM_SPEED, voltage * BASE_SPEED);
 	}
 
 } 

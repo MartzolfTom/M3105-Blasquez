@@ -17,7 +17,7 @@ public class ParrotTest {
 		assertEquals(3.0, parrot.getSpeed(), 0.0);
 	}
 
-	@Test
+	@Test 
 	public void getSpeedOfAfricanParrot_With_Two_Coconuts() {
 		Parrot parrot = new AfricanParrot(2);
 		assertEquals(0.0, parrot.getSpeed(), 0.0);

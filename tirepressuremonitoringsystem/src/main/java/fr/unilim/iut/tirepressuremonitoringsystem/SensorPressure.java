@@ -19,7 +19,6 @@ public class SensorPressure implements Sensor {
 
     private static double samplePressure() {
         Random basicRandomNumbersGenerator = new Random();
-        double pressureTelemetryValue = 6 * basicRandomNumbersGenerator.nextDouble() * basicRandomNumbersGenerator.nextDouble();
-        return pressureTelemetryValue; 
+        return  6 * basicRandomNumbersGenerator.nextDouble() * basicRandomNumbersGenerator.nextDouble(); 
     }
 }
