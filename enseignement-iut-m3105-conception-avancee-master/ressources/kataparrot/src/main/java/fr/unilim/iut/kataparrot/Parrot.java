@@ -1,17 +1,14 @@
 package fr.unilim.iut.kataparrot;
 
-import javax.management.RuntimeErrorException;
 
 public class Parrot {
 
 	private ParrotTypeEnum type;
-	private int numberOfCoconuts = 0;
 	private double voltage;
 	private boolean isNailed;
 
-	public Parrot(ParrotTypeEnum _type, int numberOfCoconuts, double voltage, boolean isNailed) {
+	public Parrot(ParrotTypeEnum _type, double voltage, boolean isNailed) {
 		this.type = _type;
-		this.numberOfCoconuts = numberOfCoconuts;
 		this.voltage = voltage;
 		this.isNailed = isNailed;
 	}
@@ -21,7 +18,7 @@ public class Parrot {
 		case EUROPEAN:
 			throw new RuntimeException("Should be unreachable");
 		case AFRICAN:
-			return Math.max(0, getBaseSpeed() - getLoadFactor() * numberOfCoconuts);
+			throw new RuntimeException("Should be unreachable");
 		case NORWEGIAN_BLUE:
 			return (isNailed) ? 0 : getBaseSpeed(voltage);
 		}
@@ -30,10 +27,6 @@ public class Parrot {
 
 	private double getBaseSpeed(double voltage) {
 		return Math.min(24.0, voltage * getBaseSpeed());
-	}
-
-	private double getLoadFactor() {
-		return 9.0;
 	}
 
 	protected static double getBaseSpeed() {
