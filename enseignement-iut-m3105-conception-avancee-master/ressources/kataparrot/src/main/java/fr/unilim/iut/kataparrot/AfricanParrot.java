@@ -7,13 +7,13 @@ public class AfricanParrot extends Parrot {
 	protected int numberOfCoconuts;
 
 	public AfricanParrot(int numberOfCoconuts ) {
-		super(ParrotTypeEnum.AFRICAN, 0,false);
+		super(ParrotTypeEnum.AFRICAN);
 		this.numberOfCoconuts=numberOfCoconuts;
 	}
 
-	@Override
 	public double getSpeed() {
-		return Math.max(0, getBaseSpeed() - LOADFACTOR * numberOfCoconuts);
+		return Math.max(0, BASE_SPEED - LOADFACTOR * numberOfCoconuts);
 	}
 
 }
+ 

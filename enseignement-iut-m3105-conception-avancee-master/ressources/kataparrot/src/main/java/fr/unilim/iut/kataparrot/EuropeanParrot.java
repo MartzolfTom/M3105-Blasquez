@@ -3,12 +3,10 @@ package fr.unilim.iut.kataparrot;
 public class EuropeanParrot extends Parrot{
 
 	public EuropeanParrot() {
-		super(ParrotTypeEnum.EUROPEAN, 0,false);
+		super(ParrotTypeEnum.EUROPEAN);
 	}
 
-	@Override
 	public double getSpeed() {
-		return super.getBaseSpeed();
+		return BASE_SPEED;
 	}
-
 }

@@ -22,28 +22,28 @@ public class ParrotTest {
 		Parrot parrot = new AfricanParrot(2);
 		assertEquals(0.0, parrot.getSpeed(), 0.0);
 	}
-
+ 
 	@Test
 	public void getSpeedOfAfricanParrot_With_No_Coconuts() {
 		Parrot parrot = new AfricanParrot(0);
 		assertEquals(12.0, parrot.getSpeed(), 0.0);
 	}
 
-	@Test
+	@Test 
 	public void getSpeedNorwegianBlueParrot_nailed() {
-		Parrot parrot = new Parrot(ParrotTypeEnum.NORWEGIAN_BLUE, 0, true);
+		Parrot parrot = new NorwegianBlueParrot(0, true);
 		assertEquals(0.0, parrot.getSpeed(), 0.0);
 	}
 
 	@Test
 	public void getSpeedNorwegianBlueParrot_not_nailed() {
-		Parrot parrot = new Parrot(ParrotTypeEnum.NORWEGIAN_BLUE, 1.5, false);
+		Parrot parrot = new NorwegianBlueParrot(1.5, false);
 		assertEquals(18.0, parrot.getSpeed(), 0.0);
 	}
 
 	@Test
 	public void getSpeedNorwegianBlueParrot_not_nailed_high_voltage() {
-		Parrot parrot = new Parrot(ParrotTypeEnum.NORWEGIAN_BLUE, 4, false);
+		Parrot parrot = new NorwegianBlueParrot(4, false);
 		assertEquals(24.0, parrot.getSpeed(), 0.0);
 	}
 }
