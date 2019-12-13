@@ -1,5 +1,6 @@
 package fr.unilim.iut.atm;
 
+
  class BankNote {
 
 	int value;

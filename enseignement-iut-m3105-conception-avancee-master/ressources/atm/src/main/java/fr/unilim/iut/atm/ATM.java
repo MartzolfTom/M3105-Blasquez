@@ -1,6 +1,4 @@
 package fr.unilim.iut.atm;
-
-
 public class ATM {
 
 	private static final String CURRENCY = "Euros";

@@ -1,6 +1,7 @@
 package fr.unilim.iut.atm;
 
 
+
 public class BankNotesBundle {
 
 	BankNote bankNote;
